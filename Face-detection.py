@@ -1,6 +1,6 @@
 import cv2 as cv
 
-img = cv.imread('cc.jpg')
+img = cv.imread('zoom.jpg')
 
 face_model =cv.CascadeClassifier('face.xml')
 
@@ -9,8 +9,6 @@ faces = face_model.detectMultiScale(gray_scale)
 
 for (x,y,w,h) in faces:
     cv.rectangle(img,(x,y), (x+w,y+h), (255,255,0), 2)
-
-
 
 cv.imshow('image', img)
 cv.waitKey(0)
